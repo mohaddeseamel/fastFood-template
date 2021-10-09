@@ -1,0 +1,651 @@
+@import "variables";
+@import "mixin";
+@import "font";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  background-image: url("../img/Rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  padding: 50px 60px 0 60px;
+
+  @include media(L) {
+    height: 700px;
+  }
+  @include media(M) {
+    height: 500px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      width: 16%;
+      @include media(L) {
+        width: 25%;
+      }
+      @include media(M) {
+        width: 30%;
+      }
+      img {
+        width: 90%;
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      img {
+        width: 35px;
+        margin-right: 10px;
+
+        @include media(L) {
+          width: 40px;
+        }
+        @include media(M) {
+          display: none;
+        }
+      }
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: $font-parkson;
+
+        @include media(L) {
+          font-size: 15px;
+        }
+        @include media(M) {
+          display: none;
+        }
+      }
+    }
+  }
+  nav {
+    direction: rtl;
+    margin-top: 20px;
+
+    @include media(L) {
+      margin-top: 50px;
+    }
+    @include media(M) {
+      display: none;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+
+        a {
+          margin-left: 35px;
+          text-decoration: none;
+          letter-spacing: 3px;
+          @include textStyle(600, 16px, $primary-color);
+          font-family: $font-parkson;
+          transition: all 0.2s ease-out;
+
+          &:hover {
+            color: $secondary-color;
+            background-color: $color-white;
+            padding: 10px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    span {
+      display: inline-block;
+      width: 22px;
+      height: 3px;
+      margin: 2px;
+      background: $secondary-color;
+    }
+    @include media(M) {
+      display: flex;
+      float: right;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &-fastFood {
+      width: 50%;
+
+      @include media(L) {
+        width: 65%;
+      }
+      @include media(M) {
+        width: 75%;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+    &-text {
+      flex-direction: column;
+      width: 50%;
+
+      @include media(L) {
+        width: 35%;
+      }
+      @include media(M) {
+        width: 25%;
+      }
+
+      .text {
+        width: 70%;
+
+        @include media(L) {
+          width: 100%;
+        }
+        @include media(M) {
+          width: 100%;
+        }
+        p {
+          border: 2px dashed #3d2514;
+          padding: 6px 8px;
+          font-family: $font-parkson;
+          @include textStyle(bold, 16px, $thirdy-color);
+
+          @include media(L) {
+            font-size: 14px;
+            border: none;
+          }
+          @include media(M) {
+            display: none;
+          }
+        }
+      }
+      .berger {
+        h1 {
+          @include textStyle(bold, 140px, $thirdy-color);
+          text-shadow: 2px 2px $color-white;
+          font-family: $font-parkson;
+        }
+        @include media(L) {
+          h1 {
+            font-size: 65px;
+          }
+        }
+        @include media(M) {
+          h1 {
+            font-size: 40px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+      .week {
+        h2 {
+          @include textStyle(bold, 70px, $thirdy-color);
+          text-shadow: 2px 2px $color-white;
+          font-family: $font-parkson;
+          @include media(L) {
+            font-size: 40px;
+          }
+          @include media(M) {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  .burgers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &-Left {
+      margin: 38px 30px 0 0;
+      width: 35%;
+
+      @include media(L) {
+        width: 45%;
+      }
+      @include media(M) {
+        width: 50%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &-Right {
+      margin-top: 5px;
+      width: 35%;
+
+      img {
+        width: 100%;
+      }
+      @include media(L) {
+        width: 45%;
+      }
+      @include media(M) {
+        width: 50%;
+      }
+      .burgersRightTop {
+        margin-top: 25px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+section {
+  .order-food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    button {
+      background-color: #ffc045;
+      padding: 10px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      @include textStyle(500, 15px, $text-color);
+    }
+    .choose {
+      margin-top: 20px;
+
+      h1 {
+        @include textStyle(bold, 50px, $text-color);
+        font-family: $font-parkson;
+      }
+    }
+    .description {
+      margin-top: 10px;
+      p {
+        text-align: center;
+        @include textStyle(500, 18px, $text-gray);
+        font-family: $font-parkson;
+      }
+    }
+  }
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    width: 100%;
+
+    .card {
+      width: 28%;
+
+      @include media(M) {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+      img {
+        width: 90%;
+        height: 300px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          h2 {
+            @include textStyle(bold, 20px, $text-color);
+            margin-top: 40px;
+            text-align: center;
+            font-family: $font-parkson;
+          }
+        }
+        .description {
+          p {
+            text-align: center;
+            margin-top: 20px;
+            @include textStyle(500, 15px, $text-color);
+            font-family: $font-parkson;
+          }
+        }
+        .btn {
+          text-align: center;
+
+          button {
+            background-color: $red-color;
+            @include textStyle(500, 15px, $color-white);
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            margin-top: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .description-food {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+
+    .aboutFood {
+      box-shadow: 8px 5px 8px 5px #aaaaaa;
+      display: flex;
+      justify-content: center;
+      width: 60%;
+
+      @include media(L) {
+        width: 100%;
+      }
+      @include media(M) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .description {
+        padding: 15px 0;
+        width: 40%;
+
+        @include media(M) {
+          width: 80%;
+        }
+
+        h3 {
+          color: $gray-color;
+          font-family: $font-parkson;
+          font-size: 16px;
+        }
+        h1 {
+          color: $brown-color;
+          font-family: $font-parkson;
+          font-weight: bold;
+          font-size: 30px;
+          margin-bottom: 20px;
+
+          @include media(M) {
+            font-size: 25px;
+            margin-top: 10px;
+          }
+        }
+        p {
+          color: $lightGray-color;
+          text-align: justify;
+          font-size: 16px;
+        }
+      }
+      .img {
+        width: 50%;
+        padding: 10px;
+
+        @include media(M) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    .reserve {
+      h4 {
+        font-family: $font-parkson;
+        @include textStyle(bold, 15px, $brown-color);
+      }
+    }
+    .title {
+      h1 {
+        font-family: $font-parkson;
+        @include textStyle(bold, 30px, $brown-color);
+        margin-top: 10px;
+      }
+    }
+    .imgs {
+      position: relative;
+
+      .berger {
+        img {
+          position: absolute;
+          width: 230px;
+          right: 530px;
+          bottom: -130px;
+        }
+      }
+      .botel {
+        img {
+          position: absolute;
+          right: 200px;
+          bottom: -300px;
+          width: 180px;
+        }
+      }
+      .plate {
+        img {
+          position: absolute;
+          width: 180px;
+          left: 579px;
+          top: 50px;
+        }
+      }
+      @include media(L) {
+        display: none;
+      }
+      @include media(M) {
+        display: none;
+      }
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      .name-email {
+        @include divInputStyle;
+
+        .name {
+          margin-right: 20px;
+          @include inputStyle;
+
+          @include media(L) {
+            @include inputStyleRes;
+          }
+          @include media(M) {
+            @include inputStyleRes;
+          }
+        }
+        .email {
+          @include inputStyle;
+
+          @include media(L) {
+            @include inputStyleRes;
+          }
+          @include media(M) {
+            @include inputStyleRes;
+          }
+        }
+        ::placeholder {
+          color: $placeholder-color;
+        }
+      }
+      .date-time {
+        @include divInputStyle;
+
+        .date {
+          @include inputStyle;
+          margin-right: 20px;
+
+          @include media(L) {
+            @include inputStyleRes;
+          }
+          @include media(M) {
+            @include inputStyleRes;
+          }
+        }
+        .time {
+          @include inputStyle;
+          @include media(L) {
+            @include inputStyleRes;
+          }
+          @include media(M) {
+            @include inputStyleRes;
+          }
+        }
+      }
+      .peo-submit {
+        @include divInputStyle;
+
+        .people {
+          @include inputStyle;
+          margin-right: 20px;
+
+          @include media(L) {
+            @include inputStyleRes;
+          }
+          @include media(M) {
+            @include inputStyleRes;
+          }
+        }
+        .btn {
+          @include inputStyle;
+          cursor: pointer;
+          background-color: $red-color;
+          @include textStyle(bold, 15px, $color-white);
+          border-radius: 3px;
+          border: none;
+
+          @include media(L) {
+            @include inputStyleRes;
+          }
+          @include media(M) {
+            @include inputStyleRes;
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  margin-top: 130px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  .footer{
+    width: 90%;
+    height: 370px;
+    background-image: url('../img/Place Your Design Here (Double Click to Edit).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media(L){
+      height: 430px;
+    }
+    @include media(M){
+      height: 470px;
+    }
+  }
+  .logo-description{
+    padding: 40px 30px;
+    width: 40%;
+
+    @include media(L){
+      width: 50%;
+    }
+    @include media(M){
+      width: 80%;
+    }
+    .logo{
+      width: 40%;
+      margin-bottom: 30px;
+
+      img{
+        width: 100%;
+      }
+    }
+    .description{
+      p{
+        @include textStyle(500, 15px, $text-footer);
+        text-align: justify;
+
+        @include media(L){
+          @include textStyle(500, 17px, $text-footer);
+        }
+
+      }
+    }
+  }
+  .location-icon{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    margin-right: 50px;
+    
+    @include media(M){
+      align-items:flex-start;
+      margin-left: 30px;
+    }
+
+    .location{
+      @include footerStyle;
+    }
+    .mail{
+      @include footerStyle;
+      margin-right: 55px;
+      margin-top: 10px;
+   
+      
+    }
+   
+  }
+  .relationshipIcon{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    margin-top: 45px;
+
+    @include media(M){
+      justify-content: center;
+    }
+  
+    i{
+      background-color: $color-white;
+      border-radius: 50%;
+      padding: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+
+      @include media(M){
+        font-size: 20px;
+        padding: 8px;
+        margin-left: 8px;
+      }
+      
+
+      &:hover{
+        background-color: $placeholder-color;
+      }
+    }
+  }
+}

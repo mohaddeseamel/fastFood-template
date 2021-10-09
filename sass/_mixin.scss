@@ -1,0 +1,45 @@
+@mixin media($size) {
+    @if($size == M){
+        @media (max-width:768px) {
+            @content;
+        }
+    }@else if($size == L){
+        @media (min-width:768px) and (max-width:1200px){
+            @content;
+        }
+    }
+}
+@mixin textStyle($weight , $size , $color){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+@mixin divInputStyle {
+      width:60%;
+      display: flex;
+      justify-content: center;
+     align-items: center;
+}
+@mixin inputStyle {
+    outline: none;
+    width: 25%;
+    padding: 8px;
+    border: 2px solid $border-input;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+@mixin inputStyleRes{
+    width: 55%;
+}
+@mixin footerStyle {
+    i{
+        color: $color-white;
+        margin-right: 20px;
+        font-size: 22px;
+      }
+      span{
+        color: $color-white;
+        font-size: 10px;
+        font-family: $font-parkson;
+      }
+}

@@ -1,0 +1,765 @@
+@font-face {
+  font-family: "Parkson";
+  src: url("../font/ParksonPERSONALUSE-SemiBoldItalicOutline.ttf") format("ttf"), url("../font/ParksonPERSONALUSE-SemiBoldItalicOutline.ttf") format("ttf");
+  font-weight: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-image: url("../img/Rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  padding: 50px 60px 0 60px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header {
+    height: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    height: 500px;
+  }
+}
+.header .logo {
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo-left {
+  width: 16%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .logo-left {
+    width: 25%;
+  }
+}
+@media (max-width: 768px) {
+  .header .logo-left {
+    width: 30%;
+  }
+}
+.header .logo-left img {
+  width: 90%;
+}
+.header .logo-right {
+  display: flex;
+  align-items: center;
+}
+.header .logo-right img {
+  width: 35px;
+  margin-right: 10px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .logo-right img {
+    width: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .header .logo-right img {
+    display: none;
+  }
+}
+.header .logo-right span {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Parkson";
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .logo-right span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .header .logo-right span {
+    display: none;
+  }
+}
+.header nav {
+  direction: rtl;
+  margin-top: 20px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header nav {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .header nav {
+    display: none;
+  }
+}
+.header nav ul {
+  list-style-type: none;
+}
+.header nav ul li {
+  display: inline-block;
+}
+.header nav ul li a {
+  margin-left: 35px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0c0c0c;
+  font-family: "Parkson";
+  transition: all 0.2s ease-out;
+}
+.header nav ul li a:hover {
+  color: #837005;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+.header .hamburger-menu {
+  display: none;
+  flex-direction: column;
+}
+.header .hamburger-menu span {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  margin: 2px;
+  background: #837005;
+}
+@media (max-width: 768px) {
+  .header .hamburger-menu {
+    display: flex;
+    float: right;
+  }
+}
+.header .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header .content-fastFood {
+  width: 50%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .content-fastFood {
+    width: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .header .content-fastFood {
+    width: 75%;
+  }
+}
+.header .content img {
+  width: 100%;
+}
+.header .content-text {
+  flex-direction: column;
+  width: 50%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .content-text {
+    width: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .header .content-text {
+    width: 25%;
+  }
+}
+.header .content-text .text {
+  width: 70%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .content-text .text {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .header .content-text .text {
+    width: 100%;
+  }
+}
+.header .content-text .text p {
+  border: 2px dashed #3d2514;
+  padding: 6px 8px;
+  font-family: "Parkson";
+  font-size: 16px;
+  font-weight: bold;
+  color: #573a1d;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .content-text .text p {
+    font-size: 14px;
+    border: none;
+  }
+}
+@media (max-width: 768px) {
+  .header .content-text .text p {
+    display: none;
+  }
+}
+.header .content-text .berger h1 {
+  font-size: 140px;
+  font-weight: bold;
+  color: #573a1d;
+  text-shadow: 2px 2px white;
+  font-family: "Parkson";
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .content-text .berger h1 {
+    font-size: 65px;
+  }
+}
+@media (max-width: 768px) {
+  .header .content-text .berger h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+}
+.header .content-text .week h2 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #573a1d;
+  text-shadow: 2px 2px white;
+  font-family: "Parkson";
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header .content-text .week h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .header .content-text .week h2 {
+    font-size: 30px;
+  }
+}
+
+main .burgers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+main .burgers-Left {
+  margin: 38px 30px 0 0;
+  width: 35%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  main .burgers-Left {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  main .burgers-Left {
+    width: 50%;
+  }
+}
+main .burgers-Left img {
+  width: 100%;
+}
+main .burgers-Right {
+  margin-top: 5px;
+  width: 35%;
+}
+main .burgers-Right img {
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  main .burgers-Right {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  main .burgers-Right {
+    width: 50%;
+  }
+}
+main .burgers-Right .burgersRightTop {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+section .order-food {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+section .order-food button {
+  background-color: #ffc045;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3d2514;
+}
+section .order-food .choose {
+  margin-top: 20px;
+}
+section .order-food .choose h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #3d2514;
+  font-family: "Parkson";
+}
+section .order-food .description {
+  margin-top: 10px;
+}
+section .order-food .description p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #71645d;
+  font-family: "Parkson";
+}
+section .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  width: 100%;
+}
+section .cards .card {
+  width: 28%;
+}
+@media (max-width: 768px) {
+  section .cards .card {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+section .cards .card img {
+  width: 90%;
+  height: 300px;
+}
+section .cards .card .container {
+  display: flex;
+  flex-direction: column;
+}
+section .cards .card .container .title h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3d2514;
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Parkson";
+}
+section .cards .card .container .description p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3d2514;
+  font-family: "Parkson";
+}
+section .cards .card .container .btn {
+  text-align: center;
+}
+section .cards .card .container .btn button {
+  background-color: #bf2222;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+section .description-food {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+section .description-food .aboutFood {
+  box-shadow: 8px 5px 8px 5px #aaaaaa;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .description-food .aboutFood {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  section .description-food .aboutFood {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+section .description-food .aboutFood .description {
+  padding: 15px 0;
+  width: 40%;
+}
+@media (max-width: 768px) {
+  section .description-food .aboutFood .description {
+    width: 80%;
+  }
+}
+section .description-food .aboutFood .description h3 {
+  color: #3d3d3d;
+  font-family: "Parkson";
+  font-size: 16px;
+}
+section .description-food .aboutFood .description h1 {
+  color: #3d2514;
+  font-family: "Parkson";
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  section .description-food .aboutFood .description h1 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}
+section .description-food .aboutFood .description p {
+  color: #717171;
+  text-align: justify;
+  font-size: 16px;
+}
+section .description-food .aboutFood .img {
+  width: 50%;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  section .description-food .aboutFood .img {
+    width: 100%;
+  }
+}
+section .description-food .aboutFood .img img {
+  width: 100%;
+}
+section .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+section .form-group .reserve h4 {
+  font-family: "Parkson";
+  font-size: 15px;
+  font-weight: bold;
+  color: #3d2514;
+}
+section .form-group .title h1 {
+  font-family: "Parkson";
+  font-size: 30px;
+  font-weight: bold;
+  color: #3d2514;
+  margin-top: 10px;
+}
+section .form-group .imgs {
+  position: relative;
+}
+section .form-group .imgs .berger img {
+  position: absolute;
+  width: 230px;
+  right: 530px;
+  bottom: -130px;
+}
+section .form-group .imgs .botel img {
+  position: absolute;
+  right: 200px;
+  bottom: -300px;
+  width: 180px;
+}
+section .form-group .imgs .plate img {
+  position: absolute;
+  width: 180px;
+  left: 579px;
+  top: 50px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .form-group .imgs {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  section .form-group .imgs {
+    display: none;
+  }
+}
+section .form-group form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+section .form-group form .name-email {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .form-group form .name-email .name {
+  margin-right: 20px;
+  outline: none;
+  width: 25%;
+  padding: 8px;
+  border: 2px solid #ebebeb;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .form-group form .name-email .name {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  section .form-group form .name-email .name {
+    width: 55%;
+  }
+}
+section .form-group form .name-email .email {
+  outline: none;
+  width: 25%;
+  padding: 8px;
+  border: 2px solid #ebebeb;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .form-group form .name-email .email {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  section .form-group form .name-email .email {
+    width: 55%;
+  }
+}
+section .form-group form .name-email ::placeholder {
+  color: #989898;
+}
+section .form-group form .date-time {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .form-group form .date-time .date {
+  outline: none;
+  width: 25%;
+  padding: 8px;
+  border: 2px solid #ebebeb;
+  margin-top: 15px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .form-group form .date-time .date {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  section .form-group form .date-time .date {
+    width: 55%;
+  }
+}
+section .form-group form .date-time .time {
+  outline: none;
+  width: 25%;
+  padding: 8px;
+  border: 2px solid #ebebeb;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .form-group form .date-time .time {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  section .form-group form .date-time .time {
+    width: 55%;
+  }
+}
+section .form-group form .peo-submit {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .form-group form .peo-submit .people {
+  outline: none;
+  width: 25%;
+  padding: 8px;
+  border: 2px solid #ebebeb;
+  margin-top: 15px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .form-group form .peo-submit .people {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  section .form-group form .peo-submit .people {
+    width: 55%;
+  }
+}
+section .form-group form .peo-submit .btn {
+  outline: none;
+  width: 25%;
+  padding: 8px;
+  border: 2px solid #ebebeb;
+  margin-top: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #bf2222;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section .form-group form .peo-submit .btn {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  section .form-group form .peo-submit .btn {
+    width: 55%;
+  }
+}
+
+footer {
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+footer .footer {
+  width: 90%;
+  height: 370px;
+  background-image: url("../img/Place Your Design Here (Double Click to Edit).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  footer .footer {
+    height: 430px;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer {
+    height: 470px;
+  }
+}
+footer .logo-description {
+  padding: 40px 30px;
+  width: 40%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  footer .logo-description {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  footer .logo-description {
+    width: 80%;
+  }
+}
+footer .logo-description .logo {
+  width: 40%;
+  margin-bottom: 30px;
+}
+footer .logo-description .logo img {
+  width: 100%;
+}
+footer .logo-description .description p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #928e8d;
+  text-align: justify;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  footer .logo-description .description p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #928e8d;
+  }
+}
+footer .location-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 50px;
+}
+@media (max-width: 768px) {
+  footer .location-icon {
+    align-items: flex-start;
+    margin-left: 30px;
+  }
+}
+footer .location-icon .location i {
+  color: white;
+  margin-right: 20px;
+  font-size: 22px;
+}
+footer .location-icon .location span {
+  color: white;
+  font-size: 10px;
+  font-family: "Parkson";
+}
+footer .location-icon .mail {
+  margin-right: 55px;
+  margin-top: 10px;
+}
+footer .location-icon .mail i {
+  color: white;
+  margin-right: 20px;
+  font-size: 22px;
+}
+footer .location-icon .mail span {
+  color: white;
+  font-size: 10px;
+  font-family: "Parkson";
+}
+footer .relationshipIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+  margin-top: 45px;
+}
+@media (max-width: 768px) {
+  footer .relationshipIcon {
+    justify-content: center;
+  }
+}
+footer .relationshipIcon i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  footer .relationshipIcon i {
+    font-size: 20px;
+    padding: 8px;
+    margin-left: 8px;
+  }
+}
+footer .relationshipIcon i:hover {
+  background-color: #989898;
+}
+
+/*# sourceMappingURL=style.css.map */
